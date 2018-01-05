@@ -16,6 +16,9 @@ class safeout(object):
     def write(self, content):
         self.tfile.write(content)
 
+    def flush(self):
+        self.tfile.flush()
+
     def __exit__(self, exc, _1, _2):
         self.tfile.close()
         if exc is None:
