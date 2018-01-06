@@ -1,2 +1,5 @@
+Version 0.2.1 (2018 Jan 6)
+	* Fix distribution (add MANIFEST.in file)
+
 Version 0.2 (2018 Jan 5)
 	* Add flush method to safeout objects
