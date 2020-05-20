@@ -11,13 +11,7 @@ class safeout(object):
     def __enter__(self):
         dirname, oname = path.split(path.abspath(self.oname))
         self.tfile = NamedTemporaryFile(prefix=oname, dir=dirname, mode=self.mode, delete=False)
-        return self
-
-    def write(self, content):
-        self.tfile.write(content)
-
-    def flush(self):
-        self.tfile.flush()
+        return self.tfile
 
     def __exit__(self, exc, _1, _2):
         self.tfile.close()
